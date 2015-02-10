@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link href="js/bootstrap.min">
+<script src="js/highmap/js/highmaps.js"></script>
+<script src="js/china-data.js"></script>
+<script type="text/javascript" src="src/2.js"></script>
+<style type="text/css">
+	#container2 {
+    height: 800px; 
+    min-width: 310px; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+	</style>
+  <body>
+  <nav class="navbar navbar navbar-inverse navbar-static-top">
+  <div class="container">
+  	<ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">用户概况</a></li>
+            <li><a href="test2.html">用户分布情况</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-md-12">
+  <div class="panel panel-default">
+  	<div class="panel-heading">
+  		地域分布
+    		</div>
+  		<div class="panel-body">
+  		<ul class="list-group">
+    	<li class="list-group-item"><!-- Standard button -->
+<button type="button" class="btn btn-info">新增用户分布</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-info">活跃用户分布</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-info">启动次数分布</button>
+    	<li class="list-group-item"><div id="container2"></div></li>
+		</ul>
+
+  </div>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  	<div class="panel panel-default">
+  	<div class="panel-heading">
+  		TOP 10 地区排名
+    </div>
+  	<div class="panel-body">
+<table class="table table-hover">
+      <thead>
+        <tr>
+          <th>地区</th>
+          <th>新增用户数</th>
+          <th>活跃用户数</th>
+          <th>启动次数</th>
+          <th>新增占比</th>
+          <th>活跃占比</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">北京</th>
+        
+          <td>33</td>
+          <td>13</td>
+          <td>12</td>
+          <td>13</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th scope="row">上海</th>
+       
+          <td>33</td>
+          <td>13</td>
+          <td>12</td>
+          <td>13</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th scope="row">无锡</th>
+   
+          <td>33</td>
+          <td>13</td>
+          <td>12</td>
+          <td>13</td>
+          <td>12</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+
+
+  </body>
+</html>
