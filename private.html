@@ -14,7 +14,7 @@
 <script type="text/javascript" src="src/3.js"></script>
 <script type="text/javascript" src="src/4.js"></script>
 <script type="text/javascript" src="src/5.js"></script>
-<script type="text/javascript" src="src/json_label_1.js"></script>
+<script type="text/javascript" src="src/private_json.js"></script>
 <style type="text/css">
 
 body {background-color: black}
@@ -22,9 +22,8 @@ body {background-color: black}
 <nav class="navbar navbar navbar-inverse navbar-static-top">
   <div class="container">
   	<ul class="nav navbar-nav">
-            <li class="active"><a href="index.html"><H5>用户概况</h5></a></li>
-            <li><a href="local.html"><H5>用户分布情况</h5></a></li>
-            <li><a href="all.html"><H5>综合分布情况</h5></a></li>
+            <li class="active"><a href="private.html"><H5>private</h5></a></li>
+          
           </ul>
   </div>
 </nav>
@@ -34,46 +33,45 @@ body {background-color: black}
   <div class="col-md-2">
   	<div class="panel  panel-default">
   		<div class="panel-heading"  >
-  			新增用户数
+  			Passive income
   		</div>
-  		<div class="panel-body" id="data1">
+  		<div class="panel-body" id='data1'>
   		</div>
 	</div>
   </div>
   <div class="col-md-2">
   <div class="panel panel-default">
   		<div class="panel-heading">
-  			周活跃|日活跃 用户数
+  			money
   		</div>
-  		<div class="panel-body">
-    	 <h1>134 | 13</h1> 
-  		</div>
-	</div></div>
-  <div class="col-md-3">
-  <div class="panel panel-default">
-  		<div class="panel-heading">
-  			启动次数|平均启动次数
-  		</div>
-  		<div class="panel-body">
-    	 <h1>13431|1.4</h1> 
+  		<div class="panel-body" id='data2'>
+    	 
   		</div>
 	</div></div>
-  <div class="col-md-3">
+  <div class="col-md-4">
   <div class="panel panel-default">
   		<div class="panel-heading">
-  			新增率|流失率
+  		The income and expenditure
   		</div>
-  		<div class="panel-body">
-    	 <h1>23% | 34%</h1> 
+  		<div class="panel-body" id='data3'>
+    
   		</div>
 	</div></div>
   <div class="col-md-2">
   <div class="panel panel-default">
   		<div class="panel-heading">
-  			次日留存率
+  			weight
   		</div>
-  		<div class="panel-body">
-    	 <h1>23%</h1> 
+  		<div class="panel-body"  id='data4'>
+  		</div>
+	</div></div>
+  <div class="col-md-2">
+  <div class="panel panel-default">
+  		<div class="panel-heading">
+  			salary
+  		</div>
+  		<div class="panel-body" id='data5'>
+  
   		</div>
 	</div></div>
 </div>
@@ -84,15 +82,6 @@ body {background-color: black}
   		用户情况趋势
     		</div>
   		<div class="panel-body">
-  		<ul class="list-group">
-    	<li class="list-group-item"><!-- Standard button -->
-<button type="button" class="btn btn-info">新增用户趋势</button>
-
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-info">日活用户趋势</button>
-
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-info">启动次数趋势</button>
     	<li class="list-group-item"><div id="container1"></div></li>
 		</ul>
 

@@ -1,0 +1,63 @@
+{
+ "name": "flare",
+ "children": [
+  {
+   "name": "饮食",
+   "children": [
+    {
+     "name": "社交饮食",
+     "children": [
+      {"name": "家庭就餐", "size": 3938},
+      {"name": "应酬就餐", "size": 3812},
+      {"name": "朋友就餐", "size": 6714},
+      {"name": "公司就餐", "size": 743}
+     ]
+    },
+    {
+     "name": "graph",
+     "children": [
+      {"name": "燃油费用", "size": 3534},
+      {"name": "地铁费用", "size": 5731},
+      {"name": "公交费用", "size": 7840},
+      {"name": "飞机费用", "size": 5914},
+      {"name": "火车费用", "size": 3416}
+     ]
+    },
+    {
+     "name": "optimization",
+     "children": [
+      {"name": "赡养父母", "size": 7074}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "animate",
+   "children": [
+    {"name": "健身", "size": 17010},
+    {"name": "滑雪", "size": 5842},
+    {
+     "name": "interpolate",
+     "children": [
+      {"name": "子女学费", "size": 1983},
+      {"name": "子女娱乐", "size": 2047},
+      {"name": "子女钢琴", "size": 1375},
+      {"name": "美吉姆英语小组", "size": 8746},
+      {"name": "子女零花钱", "size": 2202},
+      {"name": "子女保险", "size": 1382},
+      {"name": "服饰", "size": 1629},
+      {"name": "交通", "size": 1675},
+      {"name": "午餐", "size": 2042}
+     ]
+    },
+    {"name": "旅行", "size": 1041},
+    {"name": "零食", "size": 5176},
+    {"name": "电影", "size": 449}
+
+   ]
+  }
+
+
+
+ ]
+}
