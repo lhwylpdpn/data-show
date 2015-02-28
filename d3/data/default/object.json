@@ -1,0 +1,31 @@
+[ 
+	{
+        "type"    : "view",
+        "name"    : "刘浩",
+        "depends" : [
+            "男",
+            "互联网",
+            "85",
+            "天津"
+        ]
+	},
+	 {
+        "type"    : "sas",
+        "name"    : "男",
+        "depends" : []
+    },
+     {
+        "type"    : "extract",
+        "name"    : "互联网",
+        "depends" : []
+    }, 
+     {
+        "type"    : "table",
+        "name"    : "天津",
+        "depends" : []
+    }, {
+        "type"    : "report",
+        "name"    : "85",
+        "depends" : []
+    }
+]

@@ -1,0 +1,15 @@
+[
+{"type" : "name","name" : "刘浩","depends" : ["男","互联网","29","天津","跆拳道","大学同学","初中同学","小学同学","未婚"]},
+{"type" : "name","name" : "王磊","depends" : ["男","暖通工程","29","天津","初中同学","已婚"]},
+{"type" : "sex","name" : "男","depends" : []},
+{"type" : "industry","name" : "互联网","depends" : []},
+{"type" : "industry","name" : "暖通工程","depends" : []},
+{"type" : "age","name" : "29","depends" : []},
+{"type" : "group","name" : "大学同学","depends" : []},
+{"type" : "group","name" : "小学同学","depends" : []},
+{"type" : "group","name" : "初中同学","depends" : []},
+{"type" : "group","name" : "跆拳道","depends" : []},
+{"type" : "place","name" : "天津","depends" : []},
+{"type" : "marriage","name" : "已婚","depends" : []},
+{"type" : "marriage","name" : "未婚","depends" : []}
+]

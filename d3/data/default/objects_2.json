@@ -1,0 +1,41 @@
+[ 
+	{
+        "type"    : "name",
+        "name"    : "刘浩",
+        "depends" : [
+            "男",
+            "互联网",
+            "85",
+            "天津",
+            "未婚",
+            "跆拳道"
+        ]
+	},
+	 {
+        "type"    : "sex",
+        "name"    : "男",
+        "depends" : []
+    },
+     {
+        "type"    : "industry",
+        "name"    : "互联网",
+        "depends" : []
+    }, 
+     {
+        "type"    : "place",
+        "name"    : "天津",
+        "depends" : []
+    }, {
+        "type"    : "age",
+        "name"    : "85",
+        "depends" : []
+    }, {
+        "type"    : "marriage",
+        "name"    : "未婚",
+        "depends" : []
+    },{
+        "type"    : "group",
+        "name"    : "跆拳道",
+        "depends" : []
+    }
+]
