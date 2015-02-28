@@ -12,17 +12,12 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cover.css">
+     <link href="signin.css" rel="stylesheet">
     <link href="js/bootstrap.min">
+
 </head>
 <body class="home-template custom-bg" style="background-image: url('jpg/index2.jpg')">
-<nav class="navbar navbar navbar-inverse navbar-static-top">
-  <div class="container">
-    <ul class="nav navbar-nav">
-            <li class="active"><a href="#">data-show</a></li>
-            <li><a href="#">demo</a></li>         
-          </ul>
-  </div>
-</nav>
+
 
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <div class="site-wrapper">
@@ -36,7 +31,19 @@
             <h1 class="cover-heading">Create your dashboard</h1>
             <p class="lead">Create your own dashboard, real-time tracking of their own life</p>
             <p class="lead">
-              <a href="demo-index.html" class="btn btn-lg btn-default ">Let's start</a>
+                    <form class="form-signin" action="demo-index.html">
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" >
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
+        <div class="checkbox">
+    
+        </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Let's start</button>
+      </form>
+
+         
             </p>
           </div>
 
