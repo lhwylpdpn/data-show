@@ -1,190 +1,50 @@
-<!DOCTYPE html>
-<html lang="zh-CN" >
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/highstock/js/highstock.js"></script>
-<script type="text/javascript" src="js/highcharts/js/highcharts.src.js"></script>
-<script type="text/javascript" src="js/highcharts/js/highcharts-more.js"></script>
-<script type="text/javascript" src="js/highcharts/js/modules/funnel.js"></script>
-<script type="text/javascript" src="js/theme.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link href="js/bootstrap.min">
-<script type="text/javascript" src="src/1.js"></script>
-<script type="text/javascript" src="src/3.js"></script>
-<script type="text/javascript" src="src/4.js"></script>
-<script type="text/javascript" src="src/5.js"></script>
-<script type="text/javascript" src="src/json_label_1.js"></script>
-<style type="text/css">
-
-body {background-color: black}
-  </style>
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+    <link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css?v=c7d042f793">
+    <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-precomposed.png?v=c7d042f793">
+    <link rel="icon" href="/assets/ico/favicon.ico?v=c7d042f793">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cover.css">
+    <link href="js/bootstrap.min">
+</head>
+<body class="home-template custom-bg" style="background-image: url('jpg/index2.jpg')">
 <nav class="navbar navbar navbar-inverse navbar-static-top">
   <div class="container">
-  	<ul class="nav navbar-nav">
-            <li class="active"><a href="index.html"><H5>用户概况</h5></a></li>
-            <li><a href="local.html"><H5>用户分布情况</h5></a></li>
-            <li><a href="all.html"><H5>综合分布情况</h5></a></li>
+    <ul class="nav navbar-nav">
+            <li class="active"><a href="#">data-show</a></li>
+            <li><a href="#">demo</a></li>         
           </ul>
   </div>
 </nav>
 
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="site-wrapper">
 
-<div class="row">
-  <div class="col-md-2">
-  	<div class="panel  panel-default">
-  		<div class="panel-heading"  >
-  			新增用户数
-  		</div>
-  		<div class="panel-body" id="data1">
-  		</div>
-	</div>
-  </div>
-  <div class="col-md-2">
-  <div class="panel panel-default">
-  		<div class="panel-heading">
-  			周活跃|日活跃 用户数
-  		</div>
-  		<div class="panel-body">
-    	 <h1>134 | 13</h1> 
-  		</div>
-	</div></div>
-  <div class="col-md-3">
-  <div class="panel panel-default">
-  		<div class="panel-heading">
-  			启动次数|平均启动次数
-  		</div>
-  		<div class="panel-body">
-    	 <h1>13431|1.4</h1> 
-  		</div>
-	</div></div>
-  <div class="col-md-3">
-  <div class="panel panel-default">
-  		<div class="panel-heading">
-  			新增率|流失率
-  		</div>
-  		<div class="panel-body">
-    	 <h1>23% | 34%</h1> 
-  		</div>
-	</div></div>
-  <div class="col-md-2">
-  <div class="panel panel-default">
-  		<div class="panel-heading">
-  			次日留存率
-  		</div>
-  		<div class="panel-body">
-    	 <h1>23%</h1> 
-  		</div>
-	</div></div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-  <div class="panel panel-default">
-  	<div class="panel-heading">
-  		用户情况趋势
-    		</div>
-  		<div class="panel-body">
-  		<ul class="list-group">
-    	<li class="list-group-item"><!-- Standard button -->
-<button type="button" class="btn btn-info">新增用户趋势</button>
+      <div class="site-wrapper-inner">
 
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-info">日活用户趋势</button>
+        <div class="cover-container">
 
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-info">启动次数趋势</button>
-    	<li class="list-group-item"><div id="container1"></div></li>
-		</ul>
 
-  </div>
-  </div>
-</div>
-</div>
-<div class="row">
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        高峰时段
-      </div>
-      <div class="panel-body">
-    <table class="table table-striped">
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>高峰时段</td>
-              <td>9:00~10:00</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>高峰占比</td>
-              <td>45%</td>
-            </tr>
-   
-          </tbody>
-        </table>
-      </div>
-  </div>
-  </div>
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        低估时段
-      </div>
-      <div class="panel-body">
-    <table class="table table-striped">
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>低谷时段</td>
-              <td>22:00~24:00</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>低谷占比</td>
-              <td>5%</td>
-            </tr>
-   
-          </tbody>
-        </table>
-      </div>
-  </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-  <div class="panel panel-default">
+          <div class="inner cover">
+            <h1 class="cover-heading">Create your dashboard</h1>
+            <p class="lead">Create your own dashboard, real-time tracking of their own life</p>
+            <p class="lead">
+              <a href="demo-index.html" class="btn btn-lg btn-default ">Let's start</a>
+            </p>
+          </div>
 
-    <div class="panel-heading">
-      用户启动时段概况
+          
         </div>
-      <div class="panel-body">
-      <div id="container3"></div>
-  </div>
-  </div>
-</div>
-</div>
-<div class="row">
-  <div class="col-md-6">
-  <div class="panel panel-default">
 
-    <div class="panel-heading">
-      用户遗失漏斗
-        </div>
-      <div class="panel-body">
-      <div id="container4"></div>
-  </div>
-  </div>
-</div>
-<div class="col-md-6">
-  <div class="panel panel-default">
+      </div>
 
-    <div class="panel-heading">
-      用户生命周期
-        </div>
-      <div class="panel-body">
-      <div id="container5"></div>
-  </div>
-  </div>
-</div>
-</div>
-</html>
+    </div>
+
+</body></html>
