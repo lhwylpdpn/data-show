@@ -16,14 +16,24 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="js/bootstrap.min">
+
 </head>
 <body style="background-color: #333">
   <nav class="navbar navbar navbar-inverse navbar-static-top">
   <div class="container">
     <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Demo1</a></li>
-            <li ><a href="#">Demo2</a></li>
-                    
+            <li class="active"><a href="#">create dashboard</a></li>
+            <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          user  template<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="javascript:TOlink()">Personal template</a></li>
+          <li><a href="#">KPI template</a></li>
+          <li><a href="#">APPdata template</a></li>
+        </ul>
+      </li>
+    
           </ul>
   </div>
 </nav>
@@ -33,7 +43,7 @@
   <div class="col-sm-8">
               <div class="row">
                 <div class="col-md-3 "  >
-               <div class="panel  panel-default">
+               <div class="tab-pane fade panel  panel-default"  id="panel1">
                     <div class="panel-heading"  >
                       微信朋友数&nbsp;&nbsp;&nbsp;<a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"  data-toggle="modal" data-target="#exampleModal"></span></a>
                     </div>
@@ -42,7 +52,7 @@
                 </div>
               </div>
                 <div class=" col-md-3 " >
-                    <div class=" panel  panel-default " style="height:142px">
+                    <div class="tab-pane fade  panel  panel-default " id="panel2" style="height:142px">
                     <div class="panel-heading"  >
                        账户余额
                     </div>
@@ -59,7 +69,7 @@
                 </div>
 
                   <div class="  col-md-3 " >
-                    <div class="panel  panel-default ">
+                    <div class=" tab-pane fade panel  panel-default" id="panel3">
                     <div class="panel-heading"  >
                        当前体重
                     </div>
@@ -68,7 +78,7 @@
                 </div>
               </div>
                 <div class="col-md-3" >
-                      <div class="panel  panel-default ">
+                      <div class="tab-pane fade panel  panel-default " id="panel4">
                     <div class="panel-heading"  >
                        天气情况
                     </div>
@@ -80,8 +90,8 @@
               </div>
               <div class="row">
                 <div class="col-md-6" >
-               <div class="panel  panel-default">
-                    <div class="panel-heading"  >
+               <div class="tab-pane fade panel  panel-default"  id="panel5" >
+                    <div class="panel-heading">
                       家庭生活代缴费用 
                     </div>
                     <div class="panel-body" id='data1'>
@@ -96,7 +106,7 @@
               </div>
               </div>
                 <div class="col-md-6 " >
-                    <div class="panel  panel-default ">
+                    <div class="tab-pane fade panel  panel-default " id="panel6">
                     <div class="panel-heading"  >
                        收入近况
                     </div>
@@ -113,7 +123,7 @@
   </div>
   <div class="col-sm-4">   
                             <div class="col-md-12" >
-                    <div class="panel  panel-default ">
+                    <div class="tab-pane fade panel  panel-default " id="panel7">
                     <div class="panel-heading"  >
                        股票行情 &nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg" >买入</button>&nbsp;
 
@@ -137,7 +147,7 @@
 
 <div class="row">
   <div class="col-md-6">
-                      <div class="panel  panel-default ">
+                      <div class="tab-pane fade panel  panel-default " id="panel8">
                     <div class="panel-heading"  >
                        运动情况记录
                     </div>
@@ -148,7 +158,7 @@
                 </div>
               </div>
     <div class="col-md-6">
-                      <div class="panel  panel-default ">
+                      <div class="tab-pane fade panel  panel-default " id="panel9">
                     <div class="panel-heading"  >
                        年度花销分布
                     </div>
@@ -160,7 +170,7 @@
               </div>
 
 <div class="col-md-12">
-                      <div class="panel  panel-default ">
+                      <div class="tab-pane fade panel  panel-default " id="panel10">
                     <div class="panel-heading"  >
                        社交图谱
                     </div>
@@ -212,10 +222,35 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<a href="#panel1" data-toggle="tab" id="link1"  style="visibility:hidden"></a>
+<a href="#panel2" data-toggle="tab" id="link2"  style="visibility:hidden"></a>
+<a href="#panel3" data-toggle="tab" id="link3"  style="visibility:hidden"></a>
+<a href="#panel4" data-toggle="tab" id="link4"  style="visibility:hidden"></a>
+<a href="#panel5" data-toggle="tab" id="link5"  style="visibility:hidden"></a>
+<a href="#panel6" data-toggle="tab" id="link6"  style="visibility:hidden"></a>
+<a href="#panel7" data-toggle="tab" id="link7"  style="visibility:hidden"></a>
+<a href="#panel8" data-toggle="tab" id="link8"  style="visibility:hidden"></a>
+<a href="#panel9" data-toggle="tab" id="link9"  style="visibility:hidden"></a>
+<a href="#panel10" data-toggle="tab" id="link10"  style="visibility:hidden"></a>
 </body></html>
 
 <script type="text/javascript" src="src/1.js"></script>
 <script type="text/javascript" src="src/2.js"></script>
+<script type="text/javascript">
+function TOlink(){
+document.getElementById("link1").click()
+setTimeout('document.getElementById("link2").click()',500);
+setTimeout('document.getElementById("link3").click()',1000);
+setTimeout('document.getElementById("link4").click()',1500);
+setTimeout('document.getElementById("link5").click()',2000);
+setTimeout('document.getElementById("link6").click()',2500);
+setTimeout('document.getElementById("link7").click()',3000);
+setTimeout('document.getElementById("link8").click()',3500);
+setTimeout('document.getElementById("link9").click()',4000);
+setTimeout('document.getElementById("link10").click()',4500);
+
+}
+</script>
 
 <script>
 var _hmt = _hmt || [];
