@@ -50,7 +50,9 @@
         <div class="checkbox">
     
         </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Let's start</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" id="login">Let's start</button>
+      <p class="lead" id="login_text"><h5>请选用chrome、firefox、safari、opera等,一定要用IE的话建议IE11+</p>
+            <p class="lead">
       </form>
 
          
@@ -67,7 +69,7 @@
 </body></html>
  <script type="text/javascript">
     $(function () {
-    
+
     var Sys = {};
     var ua = navigator.userAgent.toLowerCase();
     var s;
@@ -78,21 +80,11 @@
     (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
     (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
         if (Sys.ie){
-            
-              alert('ie: ' + Sys.ie);
-            
+            if(parseInt(Sys.ie)<10){
+            document.getElementById("login").disabled="disabled";
+            document.getElementById("login_text").disabled=true;
+            };
         };
-     if (Sys.firefox){
-         alert('Firefox: ' + Sys.firefox);
-     };
-     if (Sys.chrome){
-         alert('Chrome: ' + Sys.chrome);
-     };
-     if (Sys.opera){
-         alert('Opera: ' + Sys.opera);
-     };
-     if (Sys.safari){
-         alert('Safari: ' + Sys.safari);
-           }; 
+
     });
     </script>
