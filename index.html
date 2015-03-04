@@ -51,8 +51,8 @@
     
         </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit" id="login">Let's start</button>
-      <p class="lead" id="login_text"><h5>请选用chrome、firefox、safari、opera等,一定要用IE的话建议IE11+</p>
-            <p class="lead">
+      <p class="lead" ><h5 style="visibility:hidden" id="login_text" >请选用chrome、firefox、safari、opera等,一定要用IE的话建议IE11+</h5></p>
+    
       </form>
 
          
@@ -82,8 +82,8 @@
         if (Sys.ie){
             if(parseInt(Sys.ie)<10){
             document.getElementById("login").disabled="disabled";
-            document.getElementById("login_text").disabled=true;
-            };
+            document.getElementById("login_text").style.visibility="";
+            }
         };
 
     });
