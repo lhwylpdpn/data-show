@@ -6,6 +6,14 @@
 <script type="text/javascript" src="js/highcharts/js/highcharts.src.js"></script>
 <script type="text/javascript" src="js/highcharts/js/highcharts-more.js"></script>
 <script type="text/javascript" src="js/highcharts/js/modules/funnel.js"></script>
+<link rel="stylesheet" href="js/jquery-ui/themes/base/jquery.ui.all.css">
+  <script src="js/jquery-ui/ui/jquery.ui.core.js"></script>
+  <script src="js/jquery-ui/ui/jquery.ui.widget.js"></script>
+  <script src="js/jquery-ui/ui/jquery.ui.mouse.js"></script>
+  <script src="js/jquery-ui/ui/jquery.ui.draggable.js"></script>
+  <script src="js/jquery-ui/ui/jquery.ui.sortable.js"></script>
+  <script src="js/jquery-ui/ui/jquery.ui.resizable.js"></script>
+
 <script type="text/javascript" src="js/theme.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,6 +23,8 @@
 <script type="text/javascript" src="src2/4.js"></script>
 <script type="text/javascript" src="src2/5.js"></script>
 <script type="text/javascript" src="src2/json_label_1.js"></script>
+<script type="text/javascript" src="src2/test.js"></script>
+
 <body style="background-color: #333"  onload="javascript:TOlink()">
   <nav class="navbar navbar navbar-inverse navbar-static-top">
   <div class="container">
@@ -34,15 +44,16 @@
           </ul>
   </div>
 </nav>
-
-<div class="row">
-  <div class="col-md-2">
-  	<div class="tab-pane fade panel  panel-default" id="panel1">
+<div class=".container-fluid " id="sortable">
+<div class="row"   id="sortable" >
+  <div class="col-md-2" >
+  	<div class=" panel  panel-default" id="resizable">
+        
   		<div class="panel-heading"  >
   			新增用户数
   		</div>
   		<div class="panel-body" id="data1">
-        <h1>1384</h1>
+        
   		</div>
 	</div>
   </div>
@@ -83,7 +94,7 @@
   		</div>
 	</div></div>
 </div>
-<div class="row">
+<div class="row"  id="sortable">
   <div class="col-md-12">
   <div class="tab-pane fade panel panel-default" id="panel6">
   	<div class="panel-heading">
@@ -106,7 +117,7 @@
   </div>
 </div>
 </div>
-<div class="row">
+<div class="row"  id="sortable">
   <div class="col-md-6">
     <div class="tab-pane fade panel panel-default" id="panel7">
       <div class="panel-heading">
@@ -156,7 +167,7 @@
   </div>
   </div>
 </div>
-<div class="row">
+<div class="row"  id="sortable">
   <div class="col-md-12">
   <div class="tab-pane fade panel panel-default" id="panel9">
 
@@ -169,7 +180,7 @@
   </div>
 </div>
 </div>
-<div class="row">
+<div class="row"  id="sortable">
   <div class="col-md-6">
   <div class="tab-pane fade panel panel-default" id="panel10">
 
@@ -193,6 +204,7 @@
   </div>
 </div>
 </div>
+</div>
 </html>
 <a href="#panel1" data-toggle="tab" id="link1"  style="visibility:hidden"></a>
 <a href="#panel2" data-toggle="tab" id="link2"  style="visibility:hidden"></a>
@@ -208,17 +220,39 @@
 <script type="text/javascript">
 function TOlink(){
 document.getElementById("link1").click()
-setTimeout('document.getElementById("link2").click()',500);
-setTimeout('document.getElementById("link3").click()',1000);
-setTimeout('document.getElementById("link4").click()',1500);
-setTimeout('document.getElementById("link5").click()',2000);
-setTimeout('document.getElementById("link6").click()',2500);
-setTimeout('document.getElementById("link7").click()',3000);
-setTimeout('document.getElementById("link8").click()',3500);
-setTimeout('document.getElementById("link9").click()',4000);
-setTimeout('document.getElementById("link10").click()',4500);
-setTimeout('document.getElementById("link11").click()',5000);
+setTimeout('document.getElementById("link2").click()',1);
+setTimeout('document.getElementById("link3").click()',1 );
+setTimeout('document.getElementById("link4").click()',1 );
+setTimeout('document.getElementById("link5").click()',1);
+setTimeout('document.getElementById("link6").click()',1);
+setTimeout('document.getElementById("link7").click()',1);
+setTimeout('document.getElementById("link8").click()',1);
+setTimeout('document.getElementById("link9").click()',1);
+setTimeout('document.getElementById("link10").click()',1);
+setTimeout('document.getElementById("link11").click()',1);
 }
 </script>
 
-<script>
+  <script>
+  $(function() {
+    $( "#sortable" ).sortable({
+      revert: true
+    });
+    $( "#draggable" ).draggable({
+      connectToSortable: "#sortable",
+      helper: "clone",
+      revert: "invalid"
+    });
+
+  });
+  </script>
+  <style>
+ 
+  </style>
+  <script>
+  $(function() {
+    $( "#resizable" ).resizable({
+      grid: 50
+    });
+  });
+  </script>

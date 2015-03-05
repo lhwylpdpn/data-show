@@ -2,7 +2,7 @@ $(function() {
 	var seriesOptions = [],
 		yAxisOptions = [],
 		seriesCounter = 0,
-		names = ['test'];
+		names = ['panel1'];
 	
 	var path = "../json/";
 	$.each(names, function(i, name) {
