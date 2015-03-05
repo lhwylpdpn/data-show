@@ -15,24 +15,29 @@
 <script type="text/javascript" src="src2/4.js"></script>
 <script type="text/javascript" src="src2/5.js"></script>
 <script type="text/javascript" src="src2/json_label_1.js"></script>
-<style type="text/css">
-
-body {background-color: black}
-  </style>
-<nav class="navbar navbar navbar-inverse navbar-static-top">
+<body style="background-color: #333"  onload="javascript:TOlink()">
+  <nav class="navbar navbar navbar-inverse navbar-static-top">
   <div class="container">
-  	<ul class="nav navbar-nav">
-            <li class="active"><a href="index.html"><H5>用户概况</h5></a></li>
-            <li><a href="local.html"><H5>用户分布情况</h5></a></li>
-            <li><a href="all.html"><H5>综合分布情况</h5></a></li>
+    <ul class="nav navbar-nav">
+            <li class="active"><a href="#">create dashboard</a></li>
+            <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          user  template<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="demo_private.html">Personal template</a></li>
+          <li><a href="#">KPI template</a></li>
+          <li><a href="demo_kpi.html">APP data template</a></li>
+        </ul>
+      </li>
+    
           </ul>
   </div>
 </nav>
 
-
 <div class="row">
   <div class="col-md-2">
-  	<div class="panel  panel-default">
+  	<div class="tab-pane fade panel  panel-default" id="panel1">
   		<div class="panel-heading"  >
   			新增用户数
   		</div>
@@ -42,7 +47,7 @@ body {background-color: black}
 	</div>
   </div>
   <div class="col-md-2">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel2">
   		<div class="panel-heading">
   			周活跃|日活跃 用户数
   		</div>
@@ -51,7 +56,7 @@ body {background-color: black}
   		</div>
 	</div></div>
   <div class="col-md-3">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel3">
   		<div class="panel-heading">
   			启动次数|平均启动次数
   		</div>
@@ -60,7 +65,7 @@ body {background-color: black}
   		</div>
 	</div></div>
   <div class="col-md-3">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel4">
   		<div class="panel-heading">
   			新增率|流失率
   		</div>
@@ -69,7 +74,7 @@ body {background-color: black}
   		</div>
 	</div></div>
   <div class="col-md-2">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel5">
   		<div class="panel-heading">
   			次日留存率
   		</div>
@@ -80,7 +85,7 @@ body {background-color: black}
 </div>
 <div class="row">
   <div class="col-md-12">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel6">
   	<div class="panel-heading">
   		用户情况趋势
     		</div>
@@ -103,7 +108,7 @@ body {background-color: black}
 </div>
 <div class="row">
   <div class="col-md-6">
-    <div class="panel panel-default">
+    <div class="tab-pane fade panel panel-default" id="panel7">
       <div class="panel-heading">
         高峰时段
       </div>
@@ -127,7 +132,7 @@ body {background-color: black}
   </div>
   </div>
   <div class="col-md-6">
-    <div class="panel panel-default">
+    <div class="tab-pane fade panel panel-default" id="panel8">
       <div class="panel-heading">
         低估时段
       </div>
@@ -153,7 +158,7 @@ body {background-color: black}
 </div>
 <div class="row">
   <div class="col-md-12">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel9">
 
     <div class="panel-heading">
       用户启动时段概况
@@ -166,7 +171,7 @@ body {background-color: black}
 </div>
 <div class="row">
   <div class="col-md-6">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel10">
 
     <div class="panel-heading">
       用户遗失漏斗
@@ -177,7 +182,7 @@ body {background-color: black}
   </div>
 </div>
 <div class="col-md-6">
-  <div class="panel panel-default">
+  <div class="tab-pane fade panel panel-default" id="panel11">
 
     <div class="panel-heading">
       用户生命周期
@@ -189,3 +194,31 @@ body {background-color: black}
 </div>
 </div>
 </html>
+<a href="#panel1" data-toggle="tab" id="link1"  style="visibility:hidden"></a>
+<a href="#panel2" data-toggle="tab" id="link2"  style="visibility:hidden"></a>
+<a href="#panel3" data-toggle="tab" id="link3"  style="visibility:hidden"></a>
+<a href="#panel4" data-toggle="tab" id="link4"  style="visibility:hidden"></a>
+<a href="#panel5" data-toggle="tab" id="link5"  style="visibility:hidden"></a>
+<a href="#panel6" data-toggle="tab" id="link6"  style="visibility:hidden"></a>
+<a href="#panel7" data-toggle="tab" id="link7"  style="visibility:hidden"></a>
+<a href="#panel8" data-toggle="tab" id="link8"  style="visibility:hidden"></a>
+<a href="#panel9" data-toggle="tab" id="link9"  style="visibility:hidden"></a>
+<a href="#panel10" data-toggle="tab" id="link10"  style="visibility:hidden"></a>
+<a href="#panel11" data-toggle="tab" id="link11"  style="visibility:hidden"></a>
+<script type="text/javascript">
+function TOlink(){
+document.getElementById("link1").click()
+setTimeout('document.getElementById("link2").click()',500);
+setTimeout('document.getElementById("link3").click()',1000);
+setTimeout('document.getElementById("link4").click()',1500);
+setTimeout('document.getElementById("link5").click()',2000);
+setTimeout('document.getElementById("link6").click()',2500);
+setTimeout('document.getElementById("link7").click()',3000);
+setTimeout('document.getElementById("link8").click()',3500);
+setTimeout('document.getElementById("link9").click()',4000);
+setTimeout('document.getElementById("link10").click()',4500);
+setTimeout('document.getElementById("link11").click()',5000);
+}
+</script>
+
+<script>
