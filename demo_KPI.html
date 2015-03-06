@@ -45,9 +45,9 @@
   </div>
 </nav>
 <div class=".container-fluid " id="sortable">
-<div class="row"   id="sortable" >
-  <div class="col-md-2" >
-  	<div class=" panel  panel-default" id="resizable">
+<div class="row"   id="sortable"  >
+  <div class="col-md-2" id="resizable" >
+  	<div class=" panel  panel-default" >
         
   		<div class="panel-heading"  >
   			新增用户数
@@ -220,16 +220,16 @@
 <script type="text/javascript">
 function TOlink(){
 document.getElementById("link1").click()
-setTimeout('document.getElementById("link2").click()',1);
-setTimeout('document.getElementById("link3").click()',1 );
-setTimeout('document.getElementById("link4").click()',1 );
-setTimeout('document.getElementById("link5").click()',1);
-setTimeout('document.getElementById("link6").click()',1);
-setTimeout('document.getElementById("link7").click()',1);
-setTimeout('document.getElementById("link8").click()',1);
-setTimeout('document.getElementById("link9").click()',1);
-setTimeout('document.getElementById("link10").click()',1);
-setTimeout('document.getElementById("link11").click()',1);
+setTimeout('document.getElementById("link2").click()',0);
+setTimeout('document.getElementById("link3").click()',0 );
+setTimeout('document.getElementById("link4").click()',0 );
+setTimeout('document.getElementById("link5").click()',0);
+setTimeout('document.getElementById("link6").click()',0);
+setTimeout('document.getElementById("link7").click()',0);
+setTimeout('document.getElementById("link8").click()',0);
+setTimeout('document.getElementById("link9").click()',0);
+setTimeout('document.getElementById("link10").click()',0);
+setTimeout('document.getElementById("link11").click()',0);
 }
 </script>
 
@@ -252,7 +252,11 @@ setTimeout('document.getElementById("link11").click()',1);
   <script>
   $(function() {
     $( "#resizable" ).resizable({
-      grid: 50
+      grid: 50,
+      animate: true,
+      helper: "ui-resizable-helper"
     });
+
   });
   </script>
+  <style type="text/css">.ui-resizable-helper { border: 2px dotted #FFF; }</style>
