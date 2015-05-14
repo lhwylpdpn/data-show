@@ -1,99 +1,124 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="not-ie" lang="en">
-<!--<![endif]-->
+<html lang="zh-CN" >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/highstock/js/highstock.js"></script>
+<script type="text/javascript" src="js/highcharts/js/highcharts.src.js"></script>
+<script type="text/javascript" src="js/highcharts/js/highcharts-more.js"></script>
+<script type="text/javascript" src="js/highcharts/js/modules/funnel.js"></script>
+<script type="text/javascript" src="js/theme.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="js/bootstrap.min">
 
+<script type="text/javascript" src="src_json/private_json.js"></script>
+<style type="text/css">
 
-
-<head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css?v=c7d042f793">
-    <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-precomposed.png?v=c7d042f793">
-    <link rel="icon" href="/assets/ico/favicon.ico?v=c7d042f793">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link href="css/monokai.min.css" rel="stylesheet">
-    <script src="js/highlight.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/cover.css">
-     <link href="signin.css" rel="stylesheet">
-    <link href="js/bootstrap.min">
-
-</head>
-<body class="home-template custom-bg" style="background-image: url('jpg/index2.jpg')">
-
-
-<!-- Stack the columns on mobile by making one full-width and the other half-width -->
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-
-          <div class="inner cover">
-            <h1 class="cover-heading">Create your dashboard</h1>
-            <p class="lead">Create your own dashboard, real-time tracking of their own life</p>
-            <p class="lead">
-                    <form class="form-signin" action="demo_index.html">
-
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" >
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
-        <div class="checkbox">
-    
-        </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" id="login">Let's start</button>
-      <p class="lead" ><h5 style="visibility:hidden" id="login_text" >请选用chrome、firefox、safari、opera等,一定要用IE的话建议IE11+</h5></p>
-    
-      </form>
-
-         
-            </p>
-          </div>
-
+body {background-color: black}
+  </style>
+<nav class="navbar navbar navbar-inverse navbar-static-top">
+  <div class="container">
+  	<ul class="nav navbar-nav">
+            <li class="active"><a href="private.html"><H5>private</h5></a></li>
           
-        </div>
+          </ul>
+  </div>
+</nav>
 
+
+<div class="row">
+  <div class="col-md-2">
+  	<div class="panel  panel-default"  style="height:142px">
+  		<div class="panel-heading"  >
+  			当年税后收入总和(未算公积金)
+  		</div>
+  		<div class="panel-body" id='data1'>
+
+  		</div>
+
+
+	</div>
+  </div>
+  <div class="col-md-2">
+  <div class="panel panel-default" style="height:142px">
+  		<div class="panel-heading">
+  			净资产
+  		</div>
+  		<div class="panel-body" id='data2'>
+    	 
+  		</div>
+	</div></div>
+  <div class="col-md-2">
+  <div class="panel panel-default"  style="height:142px">
+  		<div class="panel-heading">
+  		月固定支出
+  		</div>
+  		<div class="panel-body" id='data3'>
+    
+  		</div>
+	</div></div>
+  <div class="col-md-2">
+  <div class="panel panel-default"  style="height:142px">
+  		<div class="panel-heading">
+  			投资营收
+  		</div>
+  		<div class="panel-body"  id='data4'>
+  		</div>
+	</div></div>
+  <div class="col-md-2">
+  <div class="panel panel-default">
+  		<div class="panel-heading">
+  			公积金余额
+  		</div>
+  		<div class="panel-body" id='data5'>
+  
+  		</div>
+	</div></div>
+    <div class="col-md-2">
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        体重
       </div>
+      <div class="panel-body" id='data6'>
+        
+      </div>
+  </div></div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+  <div class="panel panel-default">
+  	<div class="panel-heading">
+  		收入均分比例
+    		</div>
+  		<div class="panel-body">
+  <div class="list-group" style="height:200px"  id='data7'>
+              </div>
 
-    </div>
+		</ul>
 
-</body></html>
- <script type="text/javascript">
-    $(function () {
+  </div>
+  </div>
+</div>
+  <div class="col-md-8">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      读书进展
+        </div>
+      <div class="panel-body">
+<div class="col-sm-6 col-md-2">
+        <div class="thumbnail">
+          <img data-src="holder.js/100%x200" alt="100%x200" src="images/1.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+          <div class="caption">
+            <h5 id="thumbnail-label">《遇见未知的自己》<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h5>
 
-    var Sys = {};
-    var ua = navigator.userAgent.toLowerCase();
-    var s;
-    (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] :
-    (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
-    (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
-    (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
-    (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
-    (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
-        if (Sys.ie){
-            if(parseInt(Sys.ie)<10){
-            document.getElementById("login").disabled="disabled";
-            document.getElementById("login_text").style.visibility="";
-            }
-        };
+          </div>
+        </div>
+      </div>
+    </ul>
 
-    });
-    </script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?7b66e7ca5a675b1c9e2a7a47f92478d5";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  </div>
+  </div>
+</div>
+</div>
+
+</html>

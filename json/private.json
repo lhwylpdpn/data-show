@@ -1,1 +1,19 @@
-{"Passiveincome":323,"Passiveper":"10.7%","money":"249153","moneyper":"83%","in_out_in":25000,"in_out_out":12200,"in_out_inper":"50%","in_out_outper":"40.6%","weight":92.3,"salary":40,"salaryper":"40%"}
+
+        {
+            "all_in": 75156,
+            "weixin": 40567,
+            "yuebao": 26.12,
+            "xianjin": 18674,
+            "stock": 113980,
+            "credit": -2541,
+            "loans": -25000,
+            "fixedcharges": 11500,
+            "gongjijin": 1928,
+            "tizhong": 94.5,
+            "salary_richang": 42,
+            "salary_touzi": 15,
+            "salary_study": 8,
+            "salary_cunkuan": 10,
+            "salary_muqin": 15,
+            "salary": 19800
+        }
